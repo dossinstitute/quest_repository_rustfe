@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+    <link media="all" rel="stylesheet" href="css/style.css" />
+    <!-- Include the Stellar SDK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-sdk/10.4.0/stellar-sdk.min.js"></script>
+    <!-- Include the Freighter API -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-freighter-api/3.0.0/index.min.js"></script>
+
+
+</head>
+<body>
+    <h1>Event Management</h1>
+
+    <!-- Section to list all events -->
+    <section id="master-section">
+        <h2>Event List</h2>
+        <ul id="event-list">
+            <!-- Events will be dynamically added here -->
+        </ul>
+    </section>
+
+    <!-- Section to display and edit event details -->
+    <section id="detail-section">
+        <h2>Event Details</h2>
+        <form id="event-form">
+            <label for="event-id">Event ID:</label>
+            <input type="text" id="event-id" name="event-id" readonly>
+
+            <label for="event-name">Name:</label>
+            <input type="text" id="event-name" name="event-name">
+
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description">
+
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date">
+
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end-date">
+
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+                <option value="0">Active</option>
+                <option value="1">Completed</option>
+            </select>
+
+            <button type="button" id="new-event">New Event</button>
+            <button type="button" id="create-event">Create Event</button>
+            <button type="button" id="update-event">Update Event</button>
+            <button type="button" id="delete-event">Delete Event</button>
+        </form>
+    </section>
+
+    <!-- Link to the JavaScript file -->
+    <script src="event-admin.js"></script>
+</body>
+</html>
+
